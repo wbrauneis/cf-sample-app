@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      lang="en"
+      layout:decorator="layout">
+
+<head>
+    <title>Users Demo Web Application</title>
+</head>
+
+<body>
+<th:block layout:fragment="content">
+    <h1>Users</h1>
+
+    <div th:each="u : ${users}">
+        <div>
+            <b th:text="${u.id}">Id</b> -
+            <span th:text="${u.name}">Name</span>
+        </div>
+    </div>
+</th:block>
+</body>
+</html>
